@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOOP STORE | Elite Basketball Footwear & Gear</title>
+    <!-- Google Fonts for Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for minimal icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- Main Navigation Bar -->
+    <nav class="navbar" id="main-nav">
+        <div class="nav-container">
+            <a href="#" class="brand-logo" id="nav-logo">
+                HOOP<span>STORE</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#brands-section" class="nav-link">Brands</a></li>
+                <li><a href="#players-section" class="nav-link">NBA Series</a></li>
+                <li><a href="#recommendation-section" class="nav-link">Shoe Finder</a></li>
+                <li><a href="#shop-section" class="nav-link">Shop</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cart-trigger" id="cart-toggle-btn" aria-label="Open Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count" id="cart-badge-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modern Hero Section -->
+    <header class="hero-section">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <span class="hero-tag">THE ULTIMATE HARDWOOD PERFORMANCE</span>
+                <h1 class="hero-title">DOMINATE<br>THE COURT.</h1>
+                <p class="hero-subtitle">
+                    ค้นพบรองเท้าบาสเกตบอลระดับโปรที่ตอบสนองกลศาสตร์การเคลื่อนไหวของคุณในทุกจังหวะการเล่น</p>
+                <div class="hero-actions">
+                    <a href="#shop-section" class="btn btn-primary hero-cta-btn">ช็อปเลย <i
+                            class="fa-solid fa-arrow-right" style="margin-left: 10px;"></i></a>
+                    <a href="#recommendation-section" class="btn btn-secondary">วิเคราะห์การเล่น</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-showcase-card">
+                    <img src="images/wade_pink.png" alt="Highlight Basketball Shoe" class="hero-showcase-img"
+                        id="hero-interactive-shoe">
+                    <div class="hero-shoe-meta">
+                        <span class="meta-tag">HOT RELEASE</span>
+                        <h3>Way of Wade 10</h3>
+                        <span class="meta-price">8,000 ฿</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Products (สินค้าแนะนำ) -->
+    <section class="featured-section scroll-reveal" id="featured-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">POPULAR</span>
+                <h2 class="section-title">สินค้าแนะนำ</h2>
+                <p class="section-desc">รองเท้ายอดนิยมระดับท็อปที่นักกีฬาอาชีพเลือกใช้ในฤดูกาลนี้</p>
+            </div>
+            <div class="products-grid" id="featured-products-grid">
+                <!-- Dynamically generated featured items -->
+            </div>
+        </div>
+    </section>
+
+    <!-- NBA Player Signature Section (รองเท้าของ NBA Player) -->
+    <section class="players-section scroll-reveal" id="players-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">SIGNATURE SERIES</span>
+                <h2 class="section-title">NBA PLAYER FOOTWEAR</h2>
+                <p class="section-desc">คลิกที่การ์ดผู้เล่นเพื่อค้นหาคอลเลกชันรองเท้ารุ่นพิเศษเฉพาะตัวของเขา</p>
+            </div>
+            <div class="players-grid">
+                <!-- LeBron James -->
+                <div class="player-card" data-player="James" id="player-james-card">
+                    <div class="player-img-wrapper">
+                        <img src="images/player_james.png" alt="LeBron James">
+                    </div>
+                    <div class="player-info">
+                        <span class="player-tag">LAKERS</span>
+                        <h3>LEBRON JAMES</h3>
+                        <span class="player-collab">Nike Signature Series</span>
+                    </div>
+                </div>
+                <!-- Luka Doncic -->
+                <div class="player-card" data-player="Luka" id="player-luka-card">
+                    <div class="player-img-wrapper">
+                        <img src="images/player_luka.png" alt="Luka Doncic">
+                    </div>
+                    <div class="player-info">
+                        <span class="player-tag">MAVERICKS</span>
+                        <h3>LUKA DONČIĆ</h3>
+                        <span class="player-collab">Jordan Signature Series</span>
+                    </div>
+                </div>
+                <!-- Kyrie Irving -->
+                <div class="player-card" data-player="Kyrie" id="player-kyrie-card">
+                    <div class="player-img-wrapper">
+                        <img src="images/player_kyrie.png" alt="Kyrie Irving">
+                    </div>
+                    <div class="player-info">
+                        <span class="player-tag">MAVERICKS</span>
+                        <h3>KYRIE IRVING</h3>
+                        <span class="player-collab">ANTA Signature Series</span>
+                    </div>
+                </div>
+                <!-- Dwyane Wade -->
+                <div class="player-card" data-player="Wade" id="player-wade-card">
+                    <div class="player-img-wrapper">
+                        <img src="images/player_wade.png" alt="Dwyane Wade">
+                    </div>
+                    <div class="player-info">
+                        <span class="player-tag">LEGEND</span>
+                        <h3>DWYANE WADE</h3>
+                        <span class="player-collab">Way of Wade Collection</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Directory Grid -->
+    <section class="brands-section scroll-reveal" id="brands-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">BRANDS</span>
+                <h2 class="section-title">ELITE BRANDS</h2>
+                <p class="section-desc">กรองสินค้าตามแบรนด์ที่คุณต้องการเพื่อค้นหาโมเดลที่ใช่</p>
+            </div>
+
+            <div class="brands-directory" id="brands-grid">
+                <div class="brand-card active" data-brand="all" id="brand-all-btn">
+                    <div class="brand-logo-wrapper">ALL</div>
+                    <span class="brand-card-name">All Products</span>
+                </div>
+                <div class="brand-card" data-brand="Nike" id="brand-nike-btn">
+                    <div class="brand-logo-wrapper">
+                        <!-- Nike Swoosh SVG -->
+                        <svg class="brand-svg-logo" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M2.5 12.5c4.5-1.5 9-1 12.5.8 4 2 6.5 4.7 7.5 5-.3-1.2-1.5-3.5-3.8-5.7-2.6-2.5-6.5-4.5-11.2-4.6-2 .1-3.8.7-5 1.5l-2.2.7-.2.2.2.1z" />
+                        </svg>
+                    </div>
+                    <span class="brand-card-name">NIKE</span>
+                </div>
+                <div class="brand-card" data-brand="Jordan" id="brand-jordan-btn">
+                    <div class="brand-logo-wrapper">
+                        <!-- Jumpman SVG -->
+                        <svg class="brand-svg-logo" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zm4 7.2l1.6 1.2 2.8-1.2-.4.8-2 1.2-1.6 1.2-.8 2.8v4.4l1.2 2h-1.2l-1.2-2.8-1.2 2.8h-1.2l1.2-2v-4.4l-.8-2.8-1.6-1.2-2-1.2-.4-.8 2.8 1.2 1.6-1.2z" />
+                        </svg>
+                    </div>
+                    <span class="brand-card-name">JORDAN</span>
+                </div>
+                <div class="brand-card" data-brand="Adidas" id="brand-adidas-btn">
+                    <div class="brand-logo-wrapper">
+                        <!-- Adidas SVG -->
+                        <svg class="brand-svg-logo" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M21.3 19.5L16.2 11h-3.3l5.1 8.5h3.3zm-6.2 0L10 11.1H6.7l5.1 8.4h3.3zm-6.2 0L3.8 11.2H.5L5.6 19.5h3.3z"
+                                transform="skewX(-15) translate(3, 0)" />
+                        </svg>
+                    </div>
+                    <span class="brand-card-name">ADIDAS</span>
+                </div>
+                <div class="brand-card" data-brand="Curry" id="brand-curry-btn">
+                    <div class="brand-logo-wrapper">
+                        <!-- Curry Logo styled SVG -->
+                        <svg class="brand-svg-logo" viewBox="0 0 24 24" fill="currentColor">
+                            <text x="3" y="18" font-family="'Space Grotesk', sans-serif" font-weight="800"
+                                font-size="16">SC</text>
+                        </svg>
+                    </div>
+                    <span class="brand-card-name">CURRY</span>
+                </div>
+                <div class="brand-card" data-brand="Puma" id="brand-puma-btn">
+                    <div class="brand-logo-wrapper">
+                        <!-- Puma Silhouette SVG -->
+                        <svg class="brand-svg-logo" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M19.5 6.5c-.5-.5-1-.8-1.5-1-.8-.3-1.8-.3-2.5.2-1.2.9-2 2.2-2.5 3.5-.3.8-.5 1.7-.8 2.5-.5 1.5-1.5 2.5-3 3-1 .3-2 .2-3-.2-.5-.2-1-.5-1.5-.8 0 0 .5-.5.8-.8.3-.3.5-.8.5-1.2v-1.5c0-.8-.3-1.5-.8-2-.5-.5-1.2-.8-2-.8H2.5c-.3 0-.6.2-.8.5s-.2.6 0 .8l2.5 2.5c.3.3.5.7.5 1.2v1.5c0 .5-.2 1-.5 1.2l-2.5 2.5c-.2.2-.2.5-.1.8s.4.5.7.5h6.5c1.2 0 2.4-.4 3.3-1.2 1.2-.9 2-2.2 2.5-3.5.3-.8.5-1.7.8-2.5.5-1.5 1.5-2.5 3-3 .5-.2 1-.3 1.5-.3.8 0 1.5.3 2 .8z" />
+                        </svg>
+                    </div>
+                    <span class="brand-card-name">PUMA</span>
+                </div>
+                <div class="brand-card" data-brand="Li-Ning" id="brand-lining-btn">
+                    <div class="brand-logo-wrapper">
+                        <!-- Way of Wade Styled logo -->
+                        <svg class="brand-svg-logo" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 6h2v6h-2V6zm0 8h2v2h-2v-2z" />
+                        </svg>
+                    </div>
+                    <span class="brand-card-name">WADE</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shoe Recommendation Engine Section (Shoe Finder) -->
+    <section class="recommendation-section scroll-reveal" id="recommendation-section">
+        <div class="section-container">
+            <div class="recom-container">
+                <div class="recom-left">
+                    <span class="section-tag">SHOE FINDER</span>
+                    <h2 class="section-title">ENGINEERED FOR YOUR GAME.</h2>
+                    <p class="section-desc">วิเคราะห์ตำแหน่ง, สไตล์การเล่น และพื้นสนามของคุณเพื่อหารองเท้าคู่ที่ดีที่สุด
+                    </p>
+
+                    <form id="recommendation-form" class="recom-form">
+                        <!-- Step 1: Position selection -->
+                        <div class="form-group finder-step-group" id="finder-step-1">
+                            <label class="form-label">1. ตำแหน่งการเล่นของคุณ (COURT POSITION)</label>
+                            <div class="option-grid">
+                                <label class="option-card">
+                                    <input type="radio" name="court-position" value="Guard">
+                                    <div class="option-content">
+                                        <span class="option-title">GUARD (PG / SG)</span>
+                                        <span class="option-desc">เน้นความเร็ว ความยืดหยุ่น การเปลี่ยนทิศทาง
+                                            และฟิลลิ่งสัมผัสพื้นสนาม</span>
+                                    </div>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="court-position" value="Forward">
+                                    <div class="option-content">
+                                        <span class="option-title">FORWARD (SF / PF)</span>
+                                        <span class="option-desc">ต้องการความสมดุลระหว่างการรองรับแรงกระแทก ความมั่นคง
+                                            และการซัพพอร์ตข้อเท้า</span>
+                                    </div>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="court-position" value="Center">
+                                    <div class="option-content">
+                                        <span class="option-title">CENTER (C)</span>
+                                        <span class="option-desc">เน้นการปกป้องแรงกระแทกสูงสุด ความแข็งแกร่ง
+                                            และการล็อกข้อเท้าหนาพิเศษ</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Play style selection (Initially Hidden) -->
+                        <div class="form-group finder-step-group hidden transition-fade" id="finder-step-2">
+                            <label class="form-label">2. สไตล์การเล่นของคุณ (PLAYING STYLE)</label>
+                            <div class="option-grid">
+                                <label class="option-card">
+                                    <input type="radio" name="play-style" value="Slasher">
+                                    <div class="option-content">
+                                        <span class="option-title">SLASHER (สายลุยเข้าทำ)</span>
+                                        <span class="option-desc">ไดรฟ์เข้าหาห่วง คัทดุดัน
+                                            ต้องการความหนึบของพื้นยางและการล็อกกระชับสูง</span>
+                                    </div>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="play-style" value="Shooter">
+                                    <div class="option-content">
+                                        <span class="option-title">SHOOTER / SPACER (สายชู้ตวงนอก)</span>
+                                        <span class="option-desc">เคลื่อนที่หาพื้นที่ว่าง ชู้ตฉับไว
+                                            ต้องการฐานรองเท้าที่มั่นคงเป็นพิเศษ</span>
+                                    </div>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="play-style" value="Post-Up">
+                                    <div class="option-content">
+                                        <span class="option-title">POST-UP / REBOUNDER (สายปะทะใต้แป้น)</span>
+                                        <span class="option-desc">เบียดใต้แป้น รีบาวด์
+                                            ต้องการระบบกันกระแทกหนาและขอบยางหุ้มด้านข้างกันพลิก</span>
+                                    </div>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="play-style" value="All-Round">
+                                    <div class="option-content">
+                                        <span class="option-title">ALL-AROUND / PLAYMAKER (คุมเกมรอบด้าน)</span>
+                                        <span class="option-desc">ทำทุกหน้าที่บนสนาม ต้องการรองเท้าที่สมดุล
+                                            มีประสิทธิภาพรอบด้าน</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Court Surface selection (Initially Hidden) -->
+                        <div class="form-group finder-step-group hidden transition-fade" id="finder-step-3">
+                            <label class="form-label">3. พื้นสนามที่ใช้เล่นเป็นหลัก (COURT SURFACE)</label>
+                            <div class="option-grid">
+                                <label class="option-card">
+                                    <input type="radio" name="court-surface" value="Concrete">
+                                    <div class="option-content">
+                                        <span class="option-title">สนามปูน / ยางมะตอย (OUTDOOR / CONCRETE)</span>
+                                        <span class="option-desc">ต้องการพื้นที่ทนต่อการขัดสีเป็นพิเศษ ยางแข็ง
+                                            ยึดเกาะดีในสนามฝุ่นเยอะ</span>
+                                    </div>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="court-surface" value="Wood">
+                                    <div class="option-content">
+                                        <span class="option-title">สนามไม้ปาเก้ / ยางในร่ม (INDOOR / WOOD COURT)</span>
+                                        <span class="option-desc">เน้นสัมผัสการเกาะคอร์ทเบรคหยุดนิ่งทันที
+                                            ไม่ลื่นสไลด์บนพื้นเรียบเงา</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Recommendation Results Display (Initially Empty/Hidden) -->
+                <div class="recom-right hidden transition-fade" id="recommendation-results-container">
+                    <div class="recom-results-content" id="recom-results-content">
+                        <div class="results-header">
+                            <h3>TOP MATCHES FOR YOU</h3>
+                            <span class="match-badge" id="recom-match-badge">GUARD / SLASHER</span>
+                        </div>
+                        <div class="recom-cards-list" id="recom-shoes-list">
+                            <!-- Dynamic recommendations inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Shop / Product Catalog Section -->
+    <section class="shop-section scroll-reveal" id="shop-section">
+        <div class="section-container">
+            <div class="shop-header">
+                <div>
+                    <h2 class="section-title">THE BASELINE COLLECTION</h2>
+                    <p class="section-desc">คอลเลกชันรองเท้าบาสเกตบอลทั้งหมดที่พร้อมให้คุณเลือกช็อป</p>
+                </div>
+                <div class="shop-controls">
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="shop-search" placeholder="ค้นหารุ่น เทคโนโลยี ซัพพอร์ต...">
+                    </div>
+                    <select id="shop-sort" class="sort-select">
+                        <option value="default">Sort: Default</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="rating-desc">Rating: Highest first</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Active Filters Indicator -->
+            <div class="active-filters-bar hidden" id="active-filters-bar">
+                <span>Filter: <strong id="filter-brand-text">All</strong></span>
+                <button class="clear-filter-btn" id="clear-filter-btn"><i class="fa-solid fa-xmark"></i> Clear</button>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="products-grid" id="products-catalog-grid">
+                <!-- Dynamically generated product cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Product Details Modal (Redesigned Spacious View) -->
+    <div class="modal-overlay hidden" id="product-detail-modal">
+        <div class="modal-card wide-modal-card">
+            <button class="modal-close" id="modal-close-btn" aria-label="Close modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-grid modal-split-grid">
+                <!-- Left Sticky Side: Image & Color Selection -->
+                <div class="modal-left-column">
+                    <div class="modal-gallery">
+                        <img id="modal-shoe-img" src="" alt="Product Image">
+                    </div>
+                    <div class="modal-colors-section">
+                        <h4>COLORWAYS (เลือกสีของจริง)</h4>
+                        <div class="color-swatches-grid" id="modal-color-swatches">
+                            <!-- Swatches injected dynamically -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Scrollable Side: Specs and Actions -->
+                <div class="modal-right-column">
+                    <span class="modal-brand" id="modal-shoe-brand">NIKE</span>
+                    <h2 class="modal-title" id="modal-shoe-name">LeBron 21 EP</h2>
+                    <div class="modal-rating">
+                        <div class="rating-stars" id="modal-shoe-stars">
+                            <!-- stars -->
+                        </div>
+                        <span id="modal-shoe-rating-text">4.8 (124 reviews)</span>
+                    </div>
+                    <div class="modal-price" id="modal-shoe-price">7,200 ฿</div>
+
+                    <div class="modal-divider"></div>
+
+                    <div class="modal-specs">
+                        <h4>TECHNICAL SPECIFICATIONS</h4>
+                        <div class="spec-row">
+                            <span class="spec-label">Cushioning (ระบบรับแรงกระแทก)</span>
+                            <span class="spec-val" id="modal-spec-cushion">Air Zoom Strobel</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Traction (ความหนึบพื้นรองเท้า)</span>
+                            <span class="spec-val" id="modal-spec-traction">Multi-directional</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Court Position (ตำแหน่งแนะนำ)</span>
+                            <span class="spec-val" id="modal-spec-positions">Forward / Center</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Playing Style (สไตล์แนะนำ)</span>
+                            <span class="spec-val" id="modal-spec-styles">Post-Up</span>
+                        </div>
+                    </div>
+
+                    <div class="modal-description">
+                        <h4>PERFORMANCE OVERVIEW</h4>
+                        <p id="modal-shoe-desc">Overview description</p>
+                    </div>
+
+                    <div class="modal-size-section">
+                        <div class="size-header">
+                            <h4>SELECT US SIZE</h4>
+                            <span class="size-guide-link">Size Chart (US Men)</span>
+                        </div>
+                        <div class="size-grid" id="modal-size-grid">
+                            <button class="size-btn">US 8</button>
+                            <button class="size-btn active">US 9</button>
+                            <button class="size-btn">US 10</button>
+                            <button class="size-btn">US 11</button>
+                            <button class="size-btn">US 12</button>
+                        </div>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button class="btn btn-primary btn-block" id="modal-add-to-cart-btn">
+                            <i class="fa-solid fa-cart-plus" style="margin-right: 8px;"></i> Add to Bag
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Drawer (Right Side Slide-out with TikTok styling) -->
+    <div class="cart-drawer-overlay hidden" id="cart-drawer-overlay">
+        <div class="cart-drawer" id="cart-drawer">
+            <div class="cart-drawer-header">
+                <h3>SHOPPING BAG (<span id="cart-drawer-count">0</span>)</h3>
+                <button class="cart-close-btn" id="cart-close-btn" aria-label="Close cart">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Cart Items Container -->
+            <div class="cart-drawer-content" id="cart-items-container">
+                <!-- Cart items dynamically rendered here -->
+                <div class="cart-empty-state" id="cart-empty-state">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <p>Your bag is currently empty.</p>
+                    <a href="#shop-section" class="btn btn-secondary" id="cart-continue-shopping">Browse Shoes</a>
+                </div>
+            </div>
+
+            <!-- Cart Summary Section -->
+            <div class="cart-drawer-footer" id="cart-summary-section">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">0 ฿</span>
+                </div>
+                <div class="summary-row text-muted">
+                    <span>Shipping</span>
+                    <span>Complimentary</span>
+                </div>
+                <div class="summary-divider"></div>
+                <div class="summary-row total-row">
+                    <span>Estimated Total</span>
+                    <span id="cart-total">0 ฿</span>
+                </div>
+
+                <button class="btn btn-primary btn-block" id="checkout-btn">
+                    PROCEED TO CHECKOUT
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- QR Code Payment Screen (Dedicated Modal) -->
+    <div class="modal-overlay hidden" id="checkout-payment-modal">
+        <div class="modal-card mini-modal qr-payment-modal">
+            <button class="modal-close" id="payment-close-btn" aria-label="Close payment">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="qr-payment-content">
+                <div class="qr-payment-header">
+                    <svg class="thai-qr-logo" viewBox="0 0 100 40" width="80" height="32">
+                        <rect width="100" height="40" rx="5" fill="#003566" />
+                        <text x="50" y="25" fill="#fff" font-family="sans-serif" font-weight="bold" font-size="12"
+                            text-anchor="middle">Thai QR Payment</text>
+                    </svg>
+                    <h3>สแกนเพื่อชำระเงิน</h3>
+                    <p class="payment-instruction">สแกน QR Code ด้านล่างด้วยแอปพลิเคชันธนาคารเพื่อชำระเงิน</p>
+                </div>
+
+                <div class="qr-code-wrapper">
+                    <!-- Simulated Dynamic QR Code using pure CSS and SVGs -->
+                    <div class="qr-frame">
+                        <svg class="qr-svg" viewBox="0 0 100 100" width="200" height="200">
+                            <!-- Outer anchor squares -->
+                            <rect x="5" y="5" width="25" height="25" fill="#111" stroke="#fff" stroke-width="2" />
+                            <rect x="10" y="10" width="15" height="15" fill="#fff" />
+                            <rect x="13" y="13" width="9" height="9" fill="#111" />
+
+                            <rect x="70" y="5" width="25" height="25" fill="#111" stroke="#fff" stroke-width="2" />
+                            <rect x="75" y="10" width="15" height="15" fill="#fff" />
+                            <rect x="78" y="78" width="9" height="9" fill="#111" transform="translate(-5,-70)" />
+
+                            <rect x="5" y="70" width="25" height="25" fill="#111" stroke="#fff" stroke-width="2" />
+                            <rect x="10" y="75" width="15" height="15" fill="#fff" />
+                            <rect x="13" y="78" width="9" height="9" fill="#111" />
+
+                            <!-- Randomized QR Matrix layout represented by clean SVG lines -->
+                            <path
+                                d="M40 5h10v5H40zm15 0h10v5H55zm5 10h5v10h-5zm-20 5h10v5H40zm-15 15h10v5H25zm15 5h5v10h-5zm15-5h10v5H55zm20 0h15v5H75zm-35 15h25v5H40zm35 5h10v5H75zM45 65h5v20h-5zm15 15h20v5H60zm5-15h10v5H65zm15 0h5v10h-5z"
+                                fill="#111" />
+
+                            <!-- PromtPay branding center dot logo -->
+                            <rect x="42" y="42" width="16" height="16" fill="#003566" rx="2" />
+                            <circle cx="50" cy="50" r="5" fill="#ffc300" />
+                        </svg>
+                        <div class="scanner-line"></div>
+                    </div>
+                </div>
+
+                <div class="payment-amount-display">
+                    <span class="amount-label">ยอดชำระเงิน</span>
+                    <span class="amount-val" id="payment-amount-val">0 ฿</span>
+                </div>
+
+                <div class="payment-timer">
+                    รายการจะหมดอายุใน <span id="payment-countdown">05:00</span> นาที
+                </div>
+
+                <div class="qr-payment-actions">
+                    <button class="btn btn-primary btn-block" id="confirm-payment-btn">
+                        ฉันชำระเงินเรียบร้อยแล้ว
+                    </button>
+                    <button class="btn btn-secondary btn-block" id="cancel-payment-btn">
+                        ยกเลิกการชำระเงิน
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Simulated Checkout Success Modal -->
+    <div class="modal-overlay hidden" id="checkout-success-modal">
+        <div class="modal-card mini-modal">
+            <div class="checkout-success-content">
+                <div class="success-icon-wrapper">
+                    <i class="fa-solid fa-circle-check" style="color: #2ec4b6;"></i>
+                </div>
+                <h2>ชำระเงินสำเร็จ!</h2>
+                <p>ระบบได้รับการชำระเงินของคุณเรียบร้อยแล้ว คำสั่งซื้อกำลังอยู่ในขั้นตอนจัดเตรียมสินค้า</p>
+                <div class="order-summary-details">
+                    <div>Order ID: <span id="success-order-id">#HP-874291</span></div>
+                    <div>Delivery: Express Courier (2-3 business days)</div>
+                </div>
+                <button class="btn btn-primary btn-block" id="success-close-btn">ดำเนินการต่อ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Premium Clean Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-branding">
+                <a href="#" class="brand-logo">
+                    HOOP<span>STORE</span>
+                </a>
+                <p>Providing top-tier engineered basketball footwear to players globally. Tailored to your mechanics.
+                </p>
+            </div>
+            <div class="footer-links">
+                <h4>DISCOVER</h4>
+                <ul>
+                    <li><a href="#brands-section">Brands Directory</a></li>
+                    <li><a href="#players-section">NBA Player Series</a></li>
+                    <li><a href="#recommendation-section">Shoe Recommendation Engine</a></li>
+                    <li><a href="#shop-section">All Footwear</a></li>
+                </ul>
+            </div>
+            <div class="footer-support">
+                <h4>SUPPORT</h4>
+                <ul>
+                    <li><a href="#">Size Calculator</a></li>
+                    <li><a href="#">Shipping Details</a></li>
+                    <li><a href="#">Customer Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Hoop Store. Inspired by Hoop City. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- App Script -->
+    <script src="app.js"></script>
+</body>
+
+</html>
